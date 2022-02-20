@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class TimeDisplay : MonoBehaviour
 {
     Text _text;
+    private float _timer;
 
     void Awake()
     {
@@ -21,6 +22,8 @@ public class TimeDisplay : MonoBehaviour
     //bu islem update icinde olmali
     void Update()
     {
-
+        _timer += Time.deltaTime;
+        int seconds = Mathf.FloorToInt(_timer);
+        _text.text = seconds.ToString("0000");
     }
 }
