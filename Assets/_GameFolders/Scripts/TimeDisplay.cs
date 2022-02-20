@@ -22,8 +22,10 @@ public class TimeDisplay : MonoBehaviour
     //bu islem update icinde olmali
     void Update()
     {
-        _timer += Time.deltaTime;
-        int seconds = Mathf.FloorToInt(_timer);
-        _text.text = seconds.ToString("0000");
+        //_timer += Time.deltaTime;
+        //int seconds = Mathf.FloorToInt(_timer);
+        //_text.text = seconds.ToString("0000");
+
+        _text.text=GameManager.Instance.CurrentTime.ToString("00");
     }
 }

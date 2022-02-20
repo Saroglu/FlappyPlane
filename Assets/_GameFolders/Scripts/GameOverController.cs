@@ -20,15 +20,15 @@ public class GameOverController : MonoBehaviour
     }
     private void OnEnable()
     {
-        GameManager.Instance.OnGameOverred += HandleOnGameOvered;
+        GameManager.Instance.OnGameOvered += HandleOnGameOvered;
     }
 
     private void OnDisable()
     {
-        GameManager.Instance.OnGameOverred -= HandleOnGameOvered;
+        GameManager.Instance.OnGameOvered -= HandleOnGameOvered;
     }
 
-    private void HandleOnGameOvered()
+    private void HandleOnGameOvered(int score, int bestScore)
     {
         _canvasGroup.alpha = 1f;
         _canvasGroup.interactable = true;
