@@ -106,4 +106,10 @@ public class GameManager : MonoBehaviour
         //TODO this method for load menu scene
         Debug.Log("Return Menu On Triggered");
     }
+    public void Exit()
+    {
+        Debug.Log("Exit process is triggered");
+        //bu static method ile oyunu kapatmis olusurz
+        Application.Quit();
+    }
 }
